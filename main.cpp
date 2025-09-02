@@ -16,8 +16,8 @@
 
 #ifdef BOINC
     constexpr int RUNS_PER_CHECKPOINT = 16;
-    #include "boinc/boinc_opencl.h"
-    #include "boinc/boinc_api.h"
+    #include "boinc_opencl.h"
+    #include "boinc_api.h"
     #if defined _WIN32 || defined _WIN64
         #include "boinc/boinc_win.h"
     #endif
