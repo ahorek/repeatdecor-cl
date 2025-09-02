@@ -20,7 +20,7 @@ BOINC_LIN = ./boinc/lib
 BOINC_API = ./boinc/api
 
 INCLUDE_DIR = ./include
-BOINC_INCLUDE = ./boinc/include
+BOINC_INCLUDE = ./boinc/lib
 BOINC_INCLUDE_WIN = ./boinc/win
 
 # For macOS
