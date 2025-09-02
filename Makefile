@@ -19,6 +19,7 @@ BOINC_WIN = ./lib/boinc/win
 BOINC_LIN = ../boinc/lib
 BOINC_API = ../boinc/api
 
+INCLUDE_DIR = ./include
 BOINC_INCLUDE = ../boinc/include
 BOINC_INCLUDE_WIN = ./boinc/win
 
