@@ -16,11 +16,11 @@ WIN_OPENCL_LIBS = -L$(WIN_LIBS_DIR) -lOpenCL
 
 # BOINC library paths
 BOINC_WIN = ./lib/boinc/win
-BOINC_LIN = ../../boinc/lib
-BOINC_API = ../../boinc/api
+BOINC_LIN = ../boinc/lib
+BOINC_API = ../boinc/api
 
 INCLUDE_DIR = ./include
-BOINC_INCLUDE = ../../boinc/include
+BOINC_INCLUDE = ../boinc/include
 BOINC_INCLUDE_WIN = ./boinc/win
 
 # For macOS

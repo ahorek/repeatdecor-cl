@@ -5,6 +5,7 @@ jobs:
     name: opencl/release/macos14
     runs-on: macos-14
     steps:
+    - uses: actions/checkout@v4
     - name: install dependencies
       run: |
         brew update
@@ -17,7 +18,6 @@ jobs:
         ./configure --disable-server --disable-manager --disable-client CXXFLAGS="-O3 "
         make -j
 
-    - uses: actions/checkout@v4
     - name: build
       run: |
         make boinc_lin
