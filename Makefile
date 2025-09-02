@@ -15,13 +15,11 @@ OPENCL_LIBS = -lOpenCL
 WIN_OPENCL_LIBS = -L$(WIN_LIBS_DIR) -lOpenCL
 
 # BOINC library paths
-BOINC_LIBS = ./lib/boinc/
 BOINC_WIN = ./lib/boinc/win
-BOINC_LIN = ./lib/boinc/lin
+BOINC_LIN = ../boinc/lib ../boinc/api
 
-INCLUDE_DIR = ./include
-BOINC_INCLUDE = $(INCLUDE_DIR)/boinc
-BOINC_INCLUDE_WIN = $(INCLUDE_DIR)/boinc/win
+BOINC_INCLUDE = ../boinc/include
+BOINC_INCLUDE_WIN = ./boinc/win
 
 # For macOS
 ifeq ($(shell uname), Darwin)
