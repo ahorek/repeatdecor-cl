@@ -16,11 +16,11 @@ WIN_OPENCL_LIBS = -L$(WIN_LIBS_DIR) -lOpenCL
 
 # BOINC library paths
 BOINC_WIN = ./lib/boinc/win
-BOINC_LIN = ../boinc/lib
-BOINC_API = ../boinc/api
+BOINC_LIN = ../../boinc/lib
+BOINC_API = ../../boinc/api
 
 INCLUDE_DIR = ./include
-BOINC_INCLUDE = ../boinc/include
+BOINC_INCLUDE = ../../boinc/include
 BOINC_INCLUDE_WIN = ./boinc/win
 
 # For macOS
@@ -61,7 +61,7 @@ $(WIN_BOINC_TARGET): $(SOURCES)
 	$(CROSS_CXX) $(CROSS_CXXFLAGS) -I$(INCLUDE_DIR) -I$(BOINC_INCLUDE_WIN) -L$(BOINC_WIN) -o $(WIN_BOINC_TARGET) $(SOURCES) -D_WIN32 -DBOINC -lboinc_api -lboinc -luser32 -lpthread -lboinc_opencl $(WIN_OPENCL_LIBS)
 
 $(LIN_BOINC_TARGET): $(SOURCES)
-	$(CXX) $(CXXFLAGS) -I$(INCLUDE_DIR) -L$(BOINC_LIN) -L$(BOINC_API) -o $(LIN_BOINC_TARGET) $(SOURCES) -DBOINC -lboinc_api -lboinc -lpthread -lboinc_opencl $(OPENCL_LIBS) 
+	$(CXX) $(CXXFLAGS) -I$(INCLUDE_DIR) -I$(BOINC_INCLUDE) -L$(BOINC_LIN) -L$(BOINC_API) -o $(LIN_BOINC_TARGET) $(SOURCES) -DBOINC -lboinc_api -lboinc -lpthread -lboinc_opencl $(OPENCL_LIBS) 
 
 $(MAC_TARGET): $(SOURCES)
 	$(CXX) $(CXXFLAGS) -I$(INCLUDE_DIR) -o $(MAC_TARGET) $(SOURCES) $(OPENCL_LIBS) -lpthread $(OPENCL_LIBS)
